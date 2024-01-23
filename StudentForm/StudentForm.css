@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+  border: 1px solid white;
+  background-image: linear-gradient(to right, rgb(45, 206, 198) , rgb(166, 43, 190));
+  color: aliceblue;
+  border-radius: 20px;
+}

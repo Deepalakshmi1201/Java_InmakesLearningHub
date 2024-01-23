@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="StudentForm.css">
+    <title>Student Form </title>
+</head>
+<body>
+ <div class="container">
+    <form action="">
+    <div class="row justify-content-start  my-3">
+        <div class="row mb-3">
+                <label for="name" class=" col-sm-2 col-form-label">FirstName</label>
+            <div class=" col-sm-2">    
+                <input type="text" id="name" class="form-label " placeholder="Agustd"> 
+            </div>
+                <span class="col-sm-5"> (Max 50 Characters Allowed)</span>
+        </div>
+       <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">LastName</label>
+            <div class="col-sm-2" >    
+                <input type="text" id="name" class="form-label " placeholder="dhee"> 
+            </div>
+            <span class="col-sm-5">(Max 50 Characters Allowed)</span>
+       </div>
+       <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label ">Email-Id</label>
+            <div class="col-sm-2">    
+                <input type="email" id="name" class="form-label " placeholder="xyz@gmail.com">
+            </div> 
+       </div>
+       <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label ">Mobile-Number</label>
+            <div class="col-sm-2">    
+                <input type="phonenumber" id="name" class="form-label " placeholder="987xxxxxxxx">
+            </div>
+       </div>
+       <div class="row mb-3">
+        <div class="col-auto col-sm-2 Gender ">
+            <label for="name" class="form-label">Gender</label>
+        </div>
+            <div class=" col-sm-1  form-check-inline">
+                <input type="radio" class="form-check-input" id="option1" value="Male">
+                <label for="option1">Male</label>
+            </div>
+            <div class="col-auto form-check-inline">
+                <input type="radio" class="form-check-input" id="option2" value="Female">
+                <label for="option2">Female</label>
+            </div>
+       </div>
+       <div class="row mb-3">
+            <label for="name" class="col-sm-2 col-form-label">Date Of Birth(DOB)</label>
+        <div class="col-auto">    
+            <input type="date" id="name" class="form-label" >
+        </div>
+   </div>
+   <!-- Address -->
+       <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">Address</label>
+            <div class="col-auto  form-check-inline">
+                <address>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </address>
+            </div>
+        </div>
+        <!-- City -->
+        <div class="row mb-3">
+                <label for="city" class="col-sm-2 col-form-label">City</label>
+            <div class="col-auto ">    
+                <input type="text" id="city" class="form-label " placeholder="New Delhi">
+                <span >(Max 50 Characters Allowed)</span>
+            </div>  
+       </div>
+       <!-- Pincode -->
+       <div class="row mb-3">
+                <label for="pincode" class="col-sm-2 col-form-label">Pin code</label>
+            <div class="col-auto ">    
+                <input type="number" id="pincode" class="form-label " placeholder="110066">
+                <span>(Max 6 Numbers Allowed)</span>
+            </div>
+        </div>
+        <!-- State -->
+        <div class="row mb-3">
+                <label for="state" class="col-sm-2 col-form-label">State</label>
+            <div class="col-auto ">    
+                <input type="text" id="state" class="form-label " placeholder="New Delhi">
+                <span>(Max 50 Characters Allowed)</span>
+            </div>
+       </div>
+       <!-- Country -->
+       <div class="row mb-3">
+                <label for="country" class="col-sm-2 col-form-label">Country</label>
+            <div class="col-auto ">    
+                <input type="text" id="country" class="form-label " placeholder="india">
+            </div>
+        </div>
+        <!-- Hobbies -->
+         <fieldset class="row mb-3">
+                <legend for="hobbies" class="col-sm-2 col-form-label">Hobbies</legend>
+            <div class="col-auto ">    
+                <input type="checkbox" id="hobbies" class="form-check-input ">Travelling
+            </div>
+            <div class="col-auto ">    
+                <input type="checkbox" id="hobbies" class="form-check-input ">Singing
+            </div>
+            <div class="col-auto ">    
+                <input type="checkbox" id="hobbies" class="form-check-input ">Dancing
+            </div>
+            <div class="col-auto">    
+                <input type="checkbox" id="hobbies" class="form-check-input ">cooking
+            </div>
+            <div class="col-auto">    
+                    <input type="checkbox" id="hobbies" class="form-check-input ">others 
+            </div> 
+            <div class="col-auto  ">   
+                    <input type="text"  class="col-form-label " placeholder="Painting">
+            </div>
+        </fieldset>  
+        <!-- Qualification -->
+        <fieldset class="row mb-3">
+            <legend for="name" class="col-sm-2 col-form-label">Qualification</legend>
+                <div class="col ">
+                    <label>SI.No</label>
+                    <div class="row ">
+                    <label class="my-1">1</label>
+                    <label class="my-1">2</label>
+                    <label class="my-1">3</label>
+                    <label class="my-1">4</label>
+                    <label class="my-1">5</label>
+                    </div>
+                    
+                </div>
+                <div class="col-auto col-sm-1 p-1">
+                    <label class="">Examination</label>
+                    <div class="row">
+                    <label class="my-1 ">Class X</label>
+                    <label class="my-1">Class XII</label>
+                    <label class="my-1">Graduation(UG)</label>
+                    <label class="my-1">Masters(PG)</label>
+                    <label class="my-1">Masters(PG)</label>
+                    </div>
+                    
+                </div>
+                <div class="col  ms-5 ">
+                    <label class="">Board</label>
+                    <input type="text" id="secondrow" class="mb-1" >
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                </div>
+                <div class="col ms-2 ">
+                    <label class="">Percentage</label>
+                    <input type="text" id="secondrow" class="mb-1" >
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                </div>
+                <div class="col">
+                    <label class="">Year of passing</label>
+                    <input type="text" id="secondrow"  class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                    <input type="text" id="secondrow" class="mb-1">
+                </div>
+        </div>
+         <fieldset class="row mb-3">
+                <legend for="name" class="col-sm-2 col-form-label">Courses</legend>
+                <div class="col-sm-4">
+                        <div class="col-auto form-check-inline">
+                            <input type="radio" class="form-check-input" id="option1" value="">
+                            <label for="option1">BA(Bachelor of Arts)</label>
+                        </div>
+                        <div class="row-auto form-check-inline">
+                            <input type="radio" class="form-check-input" id="option2">
+                            <label for="option2">B.Com(Bachelor of Commerce)</label>
+                        </div>
+                        <div class="row-auto form-check-inline">
+                            <input type="radio" class="form-check-input" id="option3">
+                            <label for="option3">B.Sc(Bachelor of Science)</label>
+                        </div>
+                        <div class="row-auto form-check-inline">
+                            <input type="radio" class="form-check-input" id="option4">
+                            <label for="option4">BCA(Bachelor of Computer Applications)</label>
+                        </div>
+                </div>
+        </fieldset>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
