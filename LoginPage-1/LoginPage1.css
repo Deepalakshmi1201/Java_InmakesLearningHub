@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    
+} 
+body{
+    background-image: url(../Images/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Prompt', sans-serif;
+}
+header{
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 22vw 25vw;
+    grid-template-rows: 48vh 48vh ;
+    place-content: center center;
+    
+}
+.grid .first{
+    background-color: #012D3A;
+    padding: 30px;
+    border-radius: 5px 0 0 5px;
+    color: white;
+}
+.grid .second{
+    background-color: #a4d0ec;
+    padding: 40px;
+    border-radius: 0 5px 5px 0 ;
+}
+
+.logo{
+    padding-top: 30px;
+}
+.logo i{
+  color: #E43B1C;
+}
+.logo i ,h4{
+    padding: 5px;
+    display: inline-block;
+}
+.login1{
+    padding: 40px 0 20px 0 ;
+}
+.first button{
+    width: 18vw;
+    height: 4vh;
+    margin: 1vh 0 0 0;
+    border-radius: 5px;
+    padding: 0px 0px;
+    border-color: transparent;
+    color: whitesmoke;
+}
+.login2 ,.free {
+    text-align: center;
+}
+.second #email,#password,button {
+    width: 20vw;
+    height: 4vh;
+    margin: 1vh 0 0 0;
+    margin-top: 10px;
+    
+}
+.second #email{
+    margin: 30px 0 0 0;
+}
+.second .check,button{
+    margin: 40px 0 0 0;
+}
+.second #signup,#forgot{
+    color: rgb(95, 79, 243);
+    cursor: pointer;
+}
+.free li{
+    padding: 5px 0 0 0 ;
+    display: inline-block;
+}
+.check  label {
+    display: inline-block;
+    margin-left: 10px; 
+}
+.second #email ,#password{
+    border-radius: 5px;
+    padding-left: 10px;
+    border-color: transparent;
+   
+}
+#forgot{
+    float: right;
+}
+.second button{
+    background-color: #3f69a0;
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+}
