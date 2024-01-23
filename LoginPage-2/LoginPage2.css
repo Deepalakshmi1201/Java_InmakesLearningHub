@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body{
+    background-image: url(../LoginPage-2/Image1/bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+  
+}
+header{
+    display: grid;
+    grid-template: 55vh /  20vw;
+    place-content: center center ;
+    
+}
+.logo{
+  position: absolute;
+    left: 7.5vw;
+    top: -2vh;
+   z-index: 1000;
+   font-size: 40px;
+}
+.full{
+    padding: 3vh; 
+    background-color: rgba(78, 72, 72, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 1vw;
+}
+.login li{
+    display: inline-block;
+    padding: 7vh 1.5vw 4vh 3.5vw;
+    
+}
+.login .li1{
+    color: #927fe7;
+}
+.login .li2{
+    color: aliceblue;
+}
+.label #user,#password{
+    padding: 1vh 6.5vw 1vh 0vw;
+    margin-bottom: 1vh;
+    background-color: rgb(232, 239, 247);
+    border-radius: 5px;
+    border-color: transparent;   
+}
+.label #check,small {
+    margin:10px 0 30px 0; 
+}
+.label small{
+    color: aliceblue;
+    padding-left: .5vw;
+   
+}
+button{
+    padding: 1vh 7.5vw 1vh 7.5vw;
+    border-radius: 20px;
+    text-align: center;
+    background-color:#a499d6;
+    border: 1px solid whitesmoke;
+    color: rgb(236, 244, 248);
+}
+.forgot{
+    text-align: center;
+    padding: 10px 0 10px 0;
+    color: aliceblue;
+}
+header{
+    position: absolute;
+    top: 20vh;
+    left: 42vw;
+}
