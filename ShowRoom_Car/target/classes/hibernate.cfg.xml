@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">Corona@123</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/car-showroom</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernater.cache.use_second_level_cache">true</property>
+         <property name="hibernater.cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory.class</property>
+        <mapping class = "com.model.ShowRoom" />
+        <mapping class = "com.model.Car" />
+           </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,10 @@
+create Temporary table temp_table
+select * from employee where  sal in(select sal from Employee group by sal having count(*) > 1);
+update Employee 
+set sal = 5000
+where sal in(select sal from Employee group by sal having count(*) > 1);
+DROP TEMPORARY TABLE IF EXISTS temp_table;
+update Employee 
+set sal = 5000
+where sal in (SELECT sal FROM(select sal from Employee group by sal having count(*) > 1)AS derived_table);
+select * from employee ;
