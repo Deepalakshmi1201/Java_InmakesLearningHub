@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Home</title>
+<link rel="stylesheet" href="#" th:href="@{/css/bootstrap.css}" />
+<link rel="stylesheet" href="#" th:href="@{/css/all.css}" />
+<link rel="stylesheet" href="#" th:href="@{/css/index.css}" />
+</head>
+<nav class="navbar bg-body-tertiary">
+	<div class="container" style="border-radius: 10px; background-color: #EEA5A6; font-weight: bold; font-family: cursive;">
+	  <a class="navbar-brand" href="#">
+		<img width="50" height="50" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-Cinema-cenima-flatart-icons-outline-flatarticons.png" alt="external-Cinema-cenima-flatart-icons-outline-flatarticons"/>
+		<span style="color: #281C2D;">BookMyTicket</span>
+	  </a>
+	</div>
+  </nav>
+<body>
+	<div class="container base">
+		<div class="row base-row"style="border-radius: 10px; background-color: #EEA5A6">
+			<div class="col-3 menu" style="border-radius: 10px; background-color: #222831;">
+			<div class="logo mb-5 text-center text-light  pt-1 pb-1">
+			</div>
+				<ul class="list">
+					<li><a th:href="@{/}"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a></li>
+					<li><a th:href="@{/register}"><i class="fas fa-user-plus"></i>&nbsp;&nbsp;Register</a></li>
+					<li><a th:classappend="${menu == 'login'} ? 'text-dark' : ' '" th:href="@{/loginForm}"><i class="fas fa-users"></i>&nbsp;&nbsp;Login</a></li>
+					<li><a th:href="@{/terms}"><i class="fas fa-address-card"></i>&nbsp;&nbsp;Terms & Cons
+							</a></li>
+					<li><a th:href="@{/contact}"><i class="fas fa-phone-square-alt"></i>&nbsp;&nbsp;Contact
+							us</a></li>
+				</ul>
+			</div>
+			<div class="col-9 login-form">
+				<div class="login" style="border-radius: 10px; background-color: #222831;" >
+					<form action="processing" method="post">
+						<div>
+							<span th:text="${failed}"></span>
+						</div>
+						<div class="login-head" style="border-radius: 10px; background-color: #222831;">
+						<h3 style="color:#EEA5A6 ;">Login</h3>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1" style="color:#EEA5A6 ;">Email address</label> <input
+								type="email" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Enter email"
+								name="email">
+
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1" style="color:#EEA5A6 ;">Password</label> <input
+								type="password" class="form-control" id="exampleInputPassword1"
+								placeholder="Password" name="password">
+						</div>
+						<div class="forget" >
+					<small><span><a href="#" >Forget password</a></span></small>
+					</div>
+
+						<button type="submit" class="btn  btn2" style="color: #222831 ; background-color: #EEA5A6 ;">Login</button>
+					</form>
+					<div class="login-register" style="color:#EEA5A6 ;">
+					<p style="color:#EEA5A6 ;">New user <span><a th:href="@{/register}">click here</a></span></p>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

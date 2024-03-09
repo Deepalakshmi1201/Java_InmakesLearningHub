@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Home</title>
+<link rel="stylesheet" href="#" th:href="@{/css/bootstrap.css}" />
+<link rel="stylesheet" href="#" th:href="@{/css/all.css}" />
+<link rel="stylesheet" href="#" th:href="@{/css/index.css}" />
+</head>
+<style>
+	small{
+		/* float: right; */
+		padding-left: 160%;
+		color: #281C2D;
+		font-family: "Roboto", sans-serif;
+		font-weight: 700;
+  		font-style: normal;
+	}
+	th,tr{
+		color: #EEA5A6;
+		background-color: #222831;
+		
+	}
+</style>
+<nav class="navbar bg-body-tertiary">
+	<div class="container" style="border-radius: 10px; background-color: #EEA5A6; font-weight: bold; font-family: cursive;">
+	  <a class="navbar-brand" href="#">
+		<img width="50" height="50" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-Cinema-cenima-flatart-icons-outline-flatarticons.png" alt="external-Cinema-cenima-flatart-icons-outline-flatarticons"/>
+		<span style="color: #281C2D;">BookMyTicket</span>
+		<small >
+			<span><i class="fas fa-user "></i></span>&nbsp;<span
+				class="name-user" th:if="${session.user.name}"
+				th:text="${session.user.name}"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i
+				class="fas fa-envelope"></i> <sup><i class="fas fa-sms"></i></sup></span>
+		</small>
+	  </a>
+
+	</div>
+	<div class="main-dashboard-right">
+		
+	</div>
+  </nav>
+<body>
+
+	<div class="container base">
+		<div class="row base-row" style="border-radius: 10px; background-color: #EEA5A6">
+			<div class="col-3 menu" style="border-radius: 10px; background-color: #222831;">
+			<div class="logo mb-5 text-center text-light  pt-1 pb-1">
+			
+			</div>
+				<ul class="list">
+					<li><a th:classappend="${menu == 'home'} ? 'text-dark' : ' '" th:href="@{/home}"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a></li>
+					<li><a th:href="@{/setting}"><i class="fas fa-cogs"></i>&nbsp;&nbsp;Settings</a></li>
+					<li th:if="${session.user.bid==1}"><a
+						th:href="@{/all-customers-records}"><i class="fas fa-users"></i>&nbsp;&nbsp;All
+							Users</a></li>
+					<li><a th:href="@{/order-history}"><i
+							class="fas fa-history"></i>&nbsp;&nbsp;Orders</a></li>
+					<li><a th:href="@{/terms}"><i class="fas fa-address-card"></i>&nbsp;&nbsp;Terms & Cons</a></li>
+					<li><a th:href="@{/contact}"><i class="fas fa-phone-square-alt"></i>&nbsp;&nbsp;Contact
+							us</a></li>
+					<li><a th:href="@{/logout}"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</a></li>
+				</ul>
+			</div>
+			<div class="col-9 history" style="border-radius: 5px;">
+				<div class="history-section">
+
+					<table class="table table-striped"  >
+					<thead >
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Name</th>
+							<th scope="col">Email</th>
+							<th scope="col">Password</th>
+							<th scope="col">All seats</th>
+						</tr>
+					</thead>
+					<tbody >
+						<tr th:each="customer: ${records}">
+							<th th:text="${customer.bid}"></th>
+							<th th:text="${customer.name}"></th>
+							<th th:text="${customer.email}"></th>
+							<th th:text="${customer.password}"></th>
+							<th><a th:href="@{all-seats/{id}(id=${customer.bid})}">view seats</a></th>
+
+						</tr>
+
+
+					</tbody>
+				</table>
+
+						
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- <script th:inline="javascript">
+	let str = [[${list1}]];
+	let obj = JSON.parse(str);
+	console.log(obj.seat);
+	document.write(obj);
+	
+	</script> -->
+</body>
+</html>
