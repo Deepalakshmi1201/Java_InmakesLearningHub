@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="viewChart.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            This chart shows the use of a logarithmic y-axis. Logarithmic axes can
+            be useful when dealing with data with spikes or large value gaps,
+            as they allow variance in the smaller values to remain visible.
+        </p>
+    </figure>
+    <script>
+        $(document).ready(function () {
+    $.ajax({
+        type: "GET",
+        url: "${myUrl}",
+        dataType: "json",
+        contentType: "application/json",
+        crossDomain: true,
+        success: function (data) {
+            console.log(data);
+
+            // Prepare data for Highcharts
+            var processedData = data.map(function(item) {
+                return [item.country, item.latestTotalDeaths];
+            });
+
+            // Draw chart
+            $('#container').highcharts({
+                chart: {
+                    type: "column"
+                },
+                title: {
+                    text: "Country-wise Total Deaths"
+                },
+                xAxis: {
+                    type: 'category',
+                    title: {
+                        text: "Country"
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: "Total Deaths"
+                    }
+                },
+                series: [{
+                    name: 'Total Deaths',
+                    data: processedData
+                }]
+            });
+
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
